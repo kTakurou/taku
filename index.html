@@ -3,39 +3,37 @@
     <style>
     body {
         padding: 30px;
-        background-color: black;
+        background-color: lime;
     }
     h1 {
         color: white;
     }
     h2, h3, h4, p{
-        color: white;
+        color: navy;
     }
     </style>
 </head>
 <div class="container">
+    <h1>たくろうのホームページ</h1>
+    <h2>自己紹介</h2>
+    <p id="age"></p>
+    <script>
+        const birthday = new Date(2004, 11, 13); 
+        const today = new Date();
+        let age = today.getFullYear() - birthday.getFullYear();
+        const thisYearBirthday = new Date(
+            today.getFullYear(),
+            birthday.getMonth(),
+            birthday.getDate()
+        );
+        if (today < thisYearBirthday) {
+            age--;
+        }
+        document.getElementById("age").textContent =`初めまして。たくろうです。2004年生まれの${age}歳です。`;
+    </script>
+    <h3>大学</h3>
+    <p>都内の私立大学に通っています。工学部の材料系の学科です。現在は研究室に配属されています。来年度からは現在の大学の大学院に進学します。</p>
     <div class="row">
-        <h1>たくろうのホームページ</h1>
-        <h2>自己紹介</h2>
-        <p id="age"></p>
-        <script>
-            const birthday = new Date(2004, 11, 13); 
-            // 月は0から始まるので10月は9
-            const today = new Date();
-            let age = today.getFullYear() - birthday.getFullYear();
-            // 今年の誕生日がまだ来ていなければ1歳引く
-            const thisYearBirthday = new Date(
-                today.getFullYear(),
-                birthday.getMonth(),
-                birthday.getDate()
-            );
-            if (today < thisYearBirthday) {
-                age--;
-            }
-            document.getElementById("age").textContent =`たくろうです。たくろうの由来は高校生の時のあだ名です。2004年生まれの${age}歳です。気軽に絡んでください。メッセージとかもらうと嬉しいです。よろしくお願いします。`;
-        </script>
-        <h3>大学</h3>
-        <p>都内の私立大学に通っています。工学部の材料系の学科です。来年度からは現在の大学の大学院に進学します。</p>
         <div class="col-sm-12">
             <h3>趣味</h3>
         </div>
