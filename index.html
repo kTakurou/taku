@@ -47,26 +47,31 @@
     </style>
 </head>
 <div class="container">
-    <h1>たくろうのホームページ</h1>
     <h2>自己紹介</h2>
-    <p id="age"></p>
-    <script>
-        const birthday = new Date(2004, 11, 13); 
-        const today = new Date();
-        let age = today.getFullYear() - birthday.getFullYear();
-        const thisYearBirthday = new Date(
-            today.getFullYear(),
-            birthday.getMonth(),
-            birthday.getDate()
-        );
-        if (today < thisYearBirthday) {
-            age--;
-        }
-        document.getElementById("age").innerHTML =`初めまして。たくろうです。2004年生まれの${age}歳です。年齢や内容に関係なくメッセージなどいただけると嬉しいです。<br>*初めてwebページを作りました。まだ試作状態なので不都合等ありましたら連絡お願いします。`;
-    </script>
-    <h3>大学</h3>
-    <p>都内の私立大学に通っています。工学部の材料系の学科です。来年度からは現在の大学の大学院に進学します。</p>
     <div class="row">
+        <div class="col-sm-6">
+            <p id="age"></p>
+            <script>
+                const birthday = new Date(2004, 11, 13); 
+                const today = new Date();
+                let age = today.getFullYear() - birthday.getFullYear();
+                const thisYearBirthday = new Date(
+                    today.getFullYear(),
+                    birthday.getMonth(),
+                    birthday.getDate()
+                );
+                if (today < thisYearBirthday) {
+                    age--;
+                }
+                document.getElementById("age").innerHTML =`初めまして。たくろうです。2004年生まれの${age}歳です。年齢や内容に関係なくメッセージなどいただけると嬉しいです。<br>*初めてwebページを作りました。まだ試作状態なので不都合等ありましたら連絡お願いします。`;
+            </script>
+        </div>
+        <div Class="col-sm-6">
+            <img src=".jpg" alt="画像" width="200">
+        <h3>大学</h3>
+        <p>都内の私立大学に通っています。工学部の材料系の学科です。来年度からは現在の大学の大学院に進学します。</p>
+        <h4>アルバイト</h4>
+        <p>塾講師をしています。現在は4年目になりました。</p>
         <div class="col-sm-12">
             <h3>趣味</h3>
         </div>
